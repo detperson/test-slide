@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    flex-direction: column;
+    height: 100vh;
+    background-color: #000;
+}
+
+#wrapper {
+    margin: 10px 0 0 10px;
+    width: 100%;
+    max-width: 964px;
+    position: relative;
+}
+
+#carousel {
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+#carousel::-webkit-scrollbar {
+    height: 0;
+}
+
+#prev,
+#next {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: white;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    outline: 0;
+    cursor: pointer;
+    position: absolute;
+}
+
+#prev {
+    top: 50%;
+    left: 0;
+    transform: translate(50%, -50%);
+    display: none;
+}
+
+#next {
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+
+#content {
+    display: grid;
+    grid-gap: 16px;
+    grid-auto-flow: column;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.content-box {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    background: rgba(26, 43, 77, .4);
+    color: #fff;
+    z-index: 100;
+    padding: 2px 4px;
+    border-radius: 16px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.icon-ad {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+}
+
+.icon-ad svg {
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+}
+
+.icon-ad:hover .tooltip-text {
+    visibility: visible;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    z-index: 1000;
+    width: 100px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px 15px;
+
+    font-family: Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 14px;
+    color: #a3acbf;
+    text-align: left;
+}
+
+.text {
+    position: absolute;
+    padding-left: 4px;
+    bottom: 4px;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Helvetica, Arial, sans-serif;
+    background: linear-gradient(#f7e6ea 50%, rgba(236, 222, 225, 0))
+}
+
+
+.item {
+    width: 180px;
+    height: 100%;
+    background: green;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    #next,
+    #prev {
+        display: none;
+    }
+}
