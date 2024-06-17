@@ -105,12 +105,9 @@ body {
     background-color: #fff;
     border-radius: 10px;
     padding: 10px 15px;
-
     font-family: Helvetica, Arial, sans-serif;
-    font-style: normal;
     font-weight: 400;
     font-size: 11px;
-    line-height: 14px;
     color: #a3acbf;
     text-align: left;
 }
@@ -123,15 +120,14 @@ body {
     font-size: 18px;
     font-weight: bold;
     font-family: Helvetica, Arial, sans-serif;
-    background: linear-gradient(#f7e6ea 50%, rgba(236, 222, 225, 0))
+    background: linear-gradient(#f7e6ea84 80%, rgba(236, 222, 225, 0))
 }
-
 
 .item {
     width: 180px;
     height: 100%;
-    background: green;
     border-radius: 10px;
+    object-fit: cover;
 }
 
 @media (max-width: 768px) {
